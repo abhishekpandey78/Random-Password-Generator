@@ -1,0 +1,231 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+     width: 100vw;
+     height: 100vh;
+     background-color: purple;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+h1{
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   text-align: center;
+   line-height: 1.4;
+}
+
+
+.display-container{
+    position: relative;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid yellow ;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(0,212,255,1) 100%);
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+
+.display{
+color: yellow;
+width: 100%;
+background-color: transparent;
+padding: 1.15rem 1rem;
+font-weight: 600;
+font-size: 1.5rem;
+line-height: 30px;
+letter-spacing: 1px;
+padding-right: 3.25rem;
+border: none;
+}
+
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: yellow;
+    text-transform: uppercase;
+    transform: translate(0, -50%);
+}
+
+
+
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translate(0, -50%);
+
+}
+
+.input-container{
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(0,212,255,1) 100%);;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.length-container p:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+
+ .length-container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5rem;
+    align-items: center;
+ }
+
+ #num{
+    color: yellow;
+ }
+
+ .strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+ }
+
+ .strength-container P{
+    color: white;
+    font-size: 1.5rem;
+ }
+
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%; 
+}
+
+.generate-button{
+    width: 100%;
+    padding: 1rem;
+    background-color: purple;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.25rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.25rem; 
+}
+
+.check{
+
+   display: flex;
+   align-items: center;
+   margin-top: 1rem;
+   
+}
+
+.check input{
+
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid aquamarine;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.40rem;
+}
+
+
+
+.check input:checked{
+    background-color: aqua;
+}
+
+.check input:checked::before{
+    
+    content: '✔';
+    position: absolute;
+    color: darkblue;
+    font-weight: 600;
+}
+
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.slider{
+appearance: none;
+width: 100%;
+cursor: pointer;
+background-color: violet;
+border-radius: 1rem;
+margin-top: 2rem;
+margin-bottom: 1.5rem;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: yellow;
+
+}
+
+.slider:focus{
+    outline: 3px solid yellow;
+}
+
+.slider::-webkit-slider-thumb{
+    outline: 2px solid yellow;
+    background-color: black;
+}
+
+.copy-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.toolTip{
+    background-color:  aqua;
+    position: absolute;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.toolTip.active{
+    opacity: 1;
+    transform: scale(1);
+}
